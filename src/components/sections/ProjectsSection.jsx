@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Container from "../ui/Container";
+import { motion } from "framer-motion";
 
 export default function ProjectsSection() {
   const projects = [
@@ -28,22 +31,35 @@ export default function ProjectsSection() {
 
   return (
     <Container id="projects">
-      <div className="flex items-center justify-between mb-10 md:mb-12">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        className="flex items-center justify-between mb-10 md:mb-12"
+      >
         <h2 className="font-h3 text-2xl md:text-3xl text-white uppercase tracking-tighter">
           Selected Works
         </h2>
         <span className="font-code-label text-primary/50 text-xs md:text-sm">[03]</span>
-      </div>
+      </motion.div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-        {projects.map((project) => (
-          <div key={project.id} className="glass-card rounded-[24px] overflow-hidden light-stroke group flex flex-col hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_10px_40px_rgba(138,43,226,0.15)] bg-white/[0.02] hover:bg-white/[0.04]">
+        {projects.map((project, index) => (
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95, y: 40 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
+            key={project.id} 
+            className="glass-card rounded-[24px] overflow-hidden light-stroke group flex flex-col hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_10px_40px_rgba(138,43,226,0.15)] bg-white/[0.02] hover:bg-white/[0.04]"
+          >
             <div className="h-[250px] md:h-[300px] lg:h-[350px] relative overflow-hidden border-b border-white/5">
               <div className="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
@@ -67,7 +83,7 @@ export default function ProjectsSection() {
                 <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-2" />
               </button>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </Container>

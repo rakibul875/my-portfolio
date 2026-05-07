@@ -1,5 +1,8 @@
+"use client";
+
 import { SiNextdotjs, SiReact, SiMongodb, SiTailwindcss, SiDaisyui, SiHeroui } from "react-icons/si";
 import Container from "../ui/Container";
+import { motion } from "framer-motion";
 
 export default function SkillsSection() {
   const iconBaseClass = "w-10 h-10 transition-all duration-500 group-hover:scale-110 group-hover:text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]";
@@ -49,20 +52,51 @@ export default function SkillsSection() {
     },
   ];
 
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
+    },
+  };
+
   return (
     <Container id="skills" className="relative">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(138,43,226,0.05),transparent_70%)] pointer-events-none"></div>
       
-      <div className="flex items-center justify-between mb-10 md:mb-12 relative z-10">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="flex items-center justify-between mb-10 md:mb-12 relative z-10"
+      >
         <h2 className="font-h3 text-2xl md:text-3xl text-white uppercase tracking-tighter">
           System Architecture
         </h2>
         <span className="font-code-label text-primary/50 text-xs md:text-sm">[02]</span>
-      </div>
+      </motion.div>
       
-      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 md:gap-6 relative z-10">
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 md:gap-6 relative z-10"
+      >
         {skills.map((skill) => (
-          <div
+          <motion.div
+            variants={itemVariants}
             key={skill.name}
             className={`glass-card p-8 md:p-10 rounded-[24px] border flex flex-col gap-6 items-center justify-center text-center transition-all duration-500 hover:-translate-y-2 group h-full cursor-pointer bg-[#121214]/60 backdrop-blur-xl ${skill.color} ${skill.glow} ${skill.bgGlow}`}
           >
@@ -75,9 +109,9 @@ export default function SkillsSection() {
             <span className="font-code-label text-on-surface-variant group-hover:text-white text-xs md:text-sm font-bold tracking-widest transition-colors duration-500">
               {skill.name}
             </span>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </Container>
   );
 }

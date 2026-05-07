@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Container from "../ui/Container";
+import { ScrollReveal } from "../ui/ScrollReveal";
 
 export default function AboutSection() {
   return (
     <Container id="about">
-      <div className="glass-card rounded-[24px] p-8 md:p-12 light-stroke relative overflow-hidden flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+      <ScrollReveal className="glass-card rounded-[24px] p-8 md:p-12 light-stroke relative overflow-hidden flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
         <div className="absolute top-4 right-6 font-code-label text-primary/30 text-xs">
           [01]
         </div>
@@ -40,7 +41,7 @@ export default function AboutSection() {
             </div>
           </div>
         </div>
-      </div>
+      </ScrollReveal>
     </Container>
   );
 }

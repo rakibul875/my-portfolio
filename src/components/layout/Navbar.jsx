@@ -4,6 +4,7 @@ import { Terminal, Menu, X } from "lucide-react";
 import Button from "../ui/Button";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("overview");
@@ -53,13 +54,16 @@ export default function Navbar() {
 
   return (
     <>
-      <header
-        className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled
+      <motion.header
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        className={`fixed top-0 w-full z-50 transition-colors duration-500 ${isScrolled
             ? "border-b border-primary/20 bg-[#121214]/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(138,43,226,0.15)] py-2"
             : "border-b border-white/5 bg-transparent py-4"
           }`}
       >
-        <div className="flex justify-between items-center max-w-7xl mx-auto px-6 lg:px-8 h-16">
+        <div className="flex justify-between items-center max-w-7xl mx-auto px-6 lg:px-8 h-16 transition-all duration-500">
           <Link href="#overview" onClick={(e) => handleNavClick(e, "#overview")} className="flex items-center gap-3 group">
             <Terminal className="text-primary w-6 h-6 transition-transform duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(138,43,226,0.8)]" />
             <span className="text-lg lg:text-xl font-black tracking-widest text-white border-l-2 border-primary pl-3 font-inter tracking-tighter uppercase transition-shadow duration-300 group-hover:shadow-primary">
@@ -104,7 +108,7 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-      </header>
+      </motion.header>
 
       {/* Mobile Navigation Menu */}
       <div
