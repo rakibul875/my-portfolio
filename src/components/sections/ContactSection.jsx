@@ -17,7 +17,7 @@ export default function ContactSection() {
         <h2 className="font-h3 text-2xl md:text-3xl text-white uppercase tracking-tighter">
           Initiate Collaboration
         </h2>
-        <span className="font-code-label text-primary/50 text-xs md:text-sm">[04]</span>
+        <span className="font-code-label text-primary/50 text-xs md:text-sm">[05]</span>
       </ScrollReveal>
       <ScrollReveal delay={0.2} className="glass-card p-8 md:p-12 rounded-[24px] md:rounded-[32px] light-stroke max-w-3xl mx-auto shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
         <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">

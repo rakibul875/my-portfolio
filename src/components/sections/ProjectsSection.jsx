@@ -41,7 +41,7 @@ export default function ProjectsSection() {
         <h2 className="font-h3 text-2xl md:text-3xl text-white uppercase tracking-tighter">
           Selected Works
         </h2>
-        <span className="font-code-label text-primary/50 text-xs md:text-sm">[03]</span>
+        <span className="font-code-label text-primary/50 text-xs md:text-sm">[04]</span>
       </motion.div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
         {projects.map((project, index) => (
@@ -78,7 +78,7 @@ export default function ProjectsSection() {
               <p className="font-body-md text-on-surface-variant mb-8 flex-1 text-sm md:text-base">
                 {project.description}
               </p>
-              <button className="flex items-center gap-2 text-primary font-code-label text-xs md:text-sm tracking-widest group/btn self-start hover:text-white transition-colors">
+              <button data-cursor-text="VIEW" className="flex items-center gap-2 text-primary font-code-label text-xs md:text-sm tracking-widest group/btn self-start hover:text-white transition-colors">
                 VIEW_CASE_STUDY 
                 <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-2" />
               </button>

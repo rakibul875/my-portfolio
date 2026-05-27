@@ -69,8 +69,8 @@ export default function HeroSection() {
             Architecting high-performance web ecosystems with mathematical precision and aesthetic excellence. Specializing in next-generation user interfaces.
           </motion.p>
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4 sm:px-0">
-            <Button variant="primary" className="px-8">VIEW_REPOSITORIES</Button>
-            <Button variant="secondary" className="px-8">READ_MANIFESTO</Button>
+            <Button data-cursor-text="GITHUB" variant="primary" className="px-8">VIEW_REPOSITORIES</Button>
+            <Button data-cursor-text="READ" variant="secondary" className="px-8">READ_MANIFESTO</Button>
           </motion.div>
         </motion.div>
         
