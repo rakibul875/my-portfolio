@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Container from "../ui/Container";
 import { ScrollReveal } from "../ui/ScrollReveal";
+import AshikImage from '@/Image/ashik.jpg'
 
 export default function AboutSection() {
   return (
@@ -13,7 +14,7 @@ export default function AboutSection() {
         <div className="w-full lg:w-5/12 shrink-0">
           <div className="relative overflow-hidden rounded-2xl border border-white/10 grayscale hover:grayscale-0 transition-all duration-700 w-full aspect-[4/3] lg:aspect-square">
             <Image
-              src="https://media.licdn.com/dms/image/v2/D5603AQHOXPaXCnF8mQ/profile-displayphoto-scale_400_400/B56ZzCFbVvHsAg-/0/1772782731040?e=1779926400&v=beta&t=KrH8QhdB2GI5ImBa_amdCxxQG-nHDboJZqBa7Eoss_o"
+              src={AshikImage}
               alt="Developer Portrait"
               fill
               className="object-cover hover:scale-105 transition-transform duration-700"
