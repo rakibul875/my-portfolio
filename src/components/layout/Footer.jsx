@@ -22,7 +22,7 @@ export default function Footer() {
         </div>
         
         <p className="font-code-label text-[10px] tracking-widest text-on-surface-variant/50 uppercase text-center md:text-right">
-          © {new Date().getFullYear()} // SYSTEM_ROOT<br className="hidden md:block" /> ALL RIGHTS RESERVED
+          © {new Date().getFullYear()}  SYSTEM_ROOT<br className="hidden" /> ALL RIGHTS RESERVED
         </p>
       </ScrollReveal>
     </footer>
