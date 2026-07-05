@@ -95,7 +95,11 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden md:block">
-            <Button variant="small">HIRE_ME</Button>
+            <Button onClick={() => {
+              document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+            }} variant="small">
+              HIRE_ME
+            </Button>
           </div>
 
           {/* Mobile Menu Toggle */}
