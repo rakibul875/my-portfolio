@@ -5,14 +5,11 @@ export default function Footer() {
     <footer className="relative w-full overflow-hidden border-t border-white/5 bg-[#050505] py-12 md:py-16">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(138,43,226,0.05),transparent_50%)]" />
 
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 md:flex-row md:px-8">
-        {/* Logo */}
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 md:flex-row md:px-8">   
         <div className="flex items-center gap-3 font-inter text-lg font-black uppercase tracking-widest text-white md:text-xl">
           <div className="h-2 w-2 animate-pulse rounded-full bg-primary"></div>
           [DEV_ARCHITECT]
-        </div>
-
-        {/* Social Links */}
+        </div>      
         <div className="flex items-center gap-8">
           <a
             href="https://github.com/rakibul875"
@@ -33,9 +30,7 @@ export default function Footer() {
             <FaLinkedin className="text-lg" />
             LinkedIn
           </a>
-        </div>
-
-        {/* Copyright */}
+        </div>      
         <p className="text-center font-code-label text-[10px] uppercase tracking-widest text-on-surface-variant/50 md:text-right">
           © {new Date().getFullYear()}  SYSTEM_ROOT
           <br className="hidden md:block" />
