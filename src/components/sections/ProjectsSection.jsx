@@ -43,7 +43,7 @@ export default function ProjectsSection() {
           Selected Works
         </h2>
 
-        <Link href="/projects" className="flex items-center gap-2 text-primary font-code-label text-xs md:text-sm tracking-widest group/btn self-start hover:text-white transition-colors">
+        <Link href="/project" className="flex items-center gap-2 text-primary font-code-label text-xs md:text-sm tracking-widest group/btn self-start hover:text-white transition-colors">
           VIEW_ALL_PROJECTS
           <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-2" />
         </Link>
