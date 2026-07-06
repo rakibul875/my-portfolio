@@ -12,7 +12,7 @@ export default function ContactSection() {
     email: "",
     message: "",
   });
-  const [status, setStatus] = useState("idle"); // 'idle' | 'loading' | 'success' | 'error'
+  const [status, setStatus] = useState("idle");
   const [messageText, setMessageText] = useState("");
 
   const handleChange = (e) => {
