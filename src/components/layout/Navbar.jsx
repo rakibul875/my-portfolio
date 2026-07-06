@@ -24,7 +24,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      // Scroll spy logic
+   
       const sections = navLinks.map(link => document.getElementById(link.id));
       const scrollPosition = window.scrollY + 100; // Offset for navbar height
 
@@ -40,7 +40,7 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial check
+    handleScroll(); 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [navLinks]);
 
@@ -72,7 +72,7 @@ export default function Navbar() {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
+        
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
@@ -85,7 +85,7 @@ export default function Navbar() {
                   }`}
               >
                 {link.name}
-                {/* Active Indicator Underline */}
+            
                 <span
                   className={`absolute bottom-0 left-0 w-full h-[2px] bg-primary rounded-full transition-transform duration-300 origin-left ${activeSection === link.id ? "scale-x-100 shadow-[0_0_10px_rgba(138,43,226,0.8)]" : "scale-x-0"
                     }`}
@@ -102,7 +102,7 @@ export default function Navbar() {
             </Button>
           </div>
 
-          {/* Mobile Menu Toggle */}
+          
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -115,7 +115,7 @@ export default function Navbar() {
         </div>
       </motion.header>
 
-      {/* Mobile Navigation Menu */}
+     
       <div
         className={`fixed inset-0 z-40 bg-[#050505]/95 backdrop-blur-2xl transition-all duration-500 md:hidden flex flex-col items-center justify-center ${isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
           }`}
