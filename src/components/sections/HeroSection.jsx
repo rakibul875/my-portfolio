@@ -69,17 +69,18 @@ export default function HeroSection() {
         >
           <motion.span
             variants={itemVariants}
-            className="font-code-label text-primary tracking-[0.3em] uppercase mb-4 md:mb-6 block text-xs md:text-sm"
+            className="font-code-label text-primary tracking-[0.2em] uppercase mb-4 md:mb-6 flex items-center justify-center lg:justify-start gap-3 text-xs md:text-sm"
           >
-            [ INITIALIZING_SESSION ]
+            <span className="w-2 h-2 bg-primary rounded-full animate-pulse shadow-[0_0_8px_rgba(138,43,226,0.8)]"></span>
+            [ STATUS: AVAILABLE FOR OPPORTUNITIES ]
           </motion.span>
           <motion.h1
             variants={itemVariants}
             className="font-h1 text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight"
           >
-            Building The Digital{" "}
+            Engineering The Digital{" "}
             <span className="text-primary relative inline-block">
-              Future
+              Frontier
               <motion.span
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
@@ -92,9 +93,7 @@ export default function HeroSection() {
             variants={itemVariants}
             className="font-body-lg text-on-surface-variant max-w-xl mb-8 md:mb-10 text-sm md:text-base lg:text-lg"
           >
-            Architecting high-performance web ecosystems with mathematical
-            precision and aesthetic excellence. Specializing in next-generation
-            user interfaces.
+            I am a Full Stack Developer driven by a passion for solving real-world problems through clean, scalable code. I build impactful digital products using modern web technologies, aiming to shape the future as a skilled Software Engineer.
           </motion.p>
           <motion.div
             variants={itemVariants}
@@ -105,7 +104,7 @@ export default function HeroSection() {
               variant="primary"
               className="px-8"
             >
-              VIEW_PROJECTS
+              VIEW PROJECTS
             </Button>
             <Button
               data-cursor-text="READ"
@@ -113,7 +112,7 @@ export default function HeroSection() {
               className="px-8"
               onClick={handleDownload}
             >
-              DOWNLOAD_RESUME
+              DOWNLOAD RESUME
             </Button>
           </motion.div>
         </motion.div>
