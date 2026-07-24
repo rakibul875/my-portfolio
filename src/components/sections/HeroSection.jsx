@@ -3,6 +3,8 @@
 import Link from "next/link";
 import Button from "../ui/Button";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import BannerImage from "@/Image/ashik-1.png"
 
 export default function HeroSection() {
   const handleDownload = () => {
@@ -136,8 +138,15 @@ export default function HeroSection() {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className="w-32 h-32 bg-primary/20 rounded-full blur-3xl absolute"
             ></motion.div>
-            <div className="font-code-label text-primary/50 text-xs tracking-widest uppercase">
-              SYSTEM_READY
+            <div className="absolute inset-6 md:inset-8 rounded-full overflow-hidden z-10 bg-[#0a0a0a] border border-white/5 shadow-[0_0_30px_rgba(138,43,226,0.15)]">
+              <Image 
+                src={BannerImage} 
+                alt="Rakibul Islam Ashik" 
+                fill 
+                className="object-cover hover:scale-110 transition-transform duration-700"
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
         </motion.div>
