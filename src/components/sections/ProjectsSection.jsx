@@ -5,6 +5,10 @@ import { ArrowRight } from "lucide-react";
 import Container from "../ui/Container";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import summer from '@/Image/summer.png'
+import study from '@/Image/study.png'
+import connect from '@/Image/Connect.png'
+
 
 export default function ProjectsSection() {
   const projects = [
@@ -12,9 +16,8 @@ export default function ProjectsSection() {
       id: 1,
       title: "Project: MediCare Connect",
       description:
-        "MediCare Connect is a modern, secure, and feature-rich healthcare management platform built with the MERN stack. It streamlines the entire appointment process by connecting Patients, Doctors, and Administrators through a powerful role-based authentication system. The platform enables secure appointment booking, online payments, prescription management, doctor verification, and comprehensive healthcare administration—all within an intuitive and responsive interface.",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuCoKvG7_Tp76Q1kOV2MnrEy6L1g1_v8wl5j1jB3SGJuAkpNJ5C_ZfgEFlgKe4BWGXyIW7kzl3FixCJaEjYt0MXflL0w0n_gP2n1jXZGJmXbNwyL6Gx10ujGWSIUhGvDwpNv4CW4g35SNPrM7kqWPe_flAE2xYDcOQwcE3M0rrnJjimrZbS8rqqVVWFxZIlkWI44wt5mdeTRaYwW3MXorZffMFyVrOnB4GgoOQYrwLlc0PUMiVMdzgNkFxgY6EYylIZqq8z6rtl1tRry",
+        "MediCare Connect is a secure MERN-stack healthcare platform that simplifies doctor appointments, online payments, and prescription management for Patients, Doctors, and Admin",
+      image: connect,
       link: "https://github.com/rakibul875/medicare-connect-client",
       liveLink: "https://medicare-connect-client-pi.vercel.app/",
     },
@@ -23,10 +26,18 @@ export default function ProjectsSection() {
       title: "Project: StudyNook",
       description:
         " StudyNook is a premium, modern, and highly responsive MERN stack application designed to simplify booking quiet, private study rooms and spaces in libraries, campuses, or co-working hubs. Built with a focus on seamless user experience, performance, and dark-themed premium design aesthetics.",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuCFMVp_fps3j3LXrbCwQGIkvi4xWf2G4JSB8QvFrCXs6hrZ7PF5ZIuIQOWJT4AW-Ku1rZg_Ms4PBN7HST85LvwemSDEiCrRdvobxQh3bGL5Wq8xHCGGK6__L5vZGxPKZ0uARxPSuXllp86NLDHdr5wh2qjOvMgEro029wMXaezeBZqLRJFFtGzPgiYkXkmqXy6ClweRe8kTugyORcKSIHS8tkvQh-JS5uO5xRi4cI1bxzeSn-h-tIMmf-smar11HDEOjFugbP_iiJsk",
+      image: study,
       link: "https://github.com/rakibul875/study-nook",
-      liveLink: "https://study-nook-fawn.vercel.app/",
+      liveLink: "https://study-nook-fawn.vercel.app",
+    },
+    {
+      id: 3,
+      title: "Project: Summer Essentials Store",
+      description:
+        "A modern and fully responsive e-commerce platform dedicated to summer products. This project features a seamless user experience with dynamic product management and secure session-based authentication.",
+      image: summer,
+      link: "https://github.com/rakibul875/summer-essentials-store",
+      liveLink: "https://summer-essentials-store-xi.vercel.app",
     },
   ];
 
@@ -49,7 +60,7 @@ export default function ProjectsSection() {
         </Link>
       </motion.div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8 lg:gap-2">
         {projects.map((project, index) => (
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 40 }}
