@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Button from "../ui/Button";
 import { motion } from "framer-motion";
 
@@ -99,17 +100,21 @@ export default function HeroSection() {
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4 sm:px-0"
           >
-            <Button
-              data-cursor-text="GITHUB"
-              variant="primary"
-              className="px-8"
-            >
-              VIEW PROJECTS
-            </Button>
+            <Link className="w-full" href={'/project'}>
+              <Button
+                data-cursor-text="GITHUB"
+                variant="primary"
+                className="px-8"
+              >
+
+                VIEW PROJECTS
+
+              </Button>
+            </Link>
             <Button
               data-cursor-text="READ"
               variant="secondary"
-              className="px-8"
+              className="px-5"
               onClick={handleDownload}
             >
               DOWNLOAD RESUME
