@@ -17,12 +17,15 @@ export const metadata = {
   keywords: ["portfolio", "developer", "architect", "web development", "software engineering"],
 };
 
+import Preloader from "@/components/ui/Preloader";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} antialiased bg-surface-dim text-on-surface font-body-md selection:bg-primary-container selection:text-white flex flex-col`}
       >
+        <Preloader />
         {children}
       </body>
     </html>
