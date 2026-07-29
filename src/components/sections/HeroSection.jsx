@@ -5,6 +5,7 @@ import Button from "../ui/Button";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import BannerImage from "@/Image/ashik-1.png"
+import { Typewriter } from 'react-simple-typewriter';
 
 export default function HeroSection() {
   const handleDownload = () => {
@@ -92,31 +93,46 @@ export default function HeroSection() {
               ></motion.span>
             </span>
           </motion.h1>
+          <motion.h2
+            variants={itemVariants}
+            className="text-2xl md:text-3xl text-white mb-6 font-bold"
+          >
+            I am a{" "}
+            <span className="text-primary">
+              <Typewriter
+                words={['Full Stack Developer', 'Software Engineer', 'Problem Solver']}
+                loop={true}
+                cursor
+                cursorStyle="_"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
+            </span>
+          </motion.h2>
           <motion.p
             variants={itemVariants}
             className="font-body-lg text-on-surface-variant max-w-xl mb-8 md:mb-10 text-sm md:text-base lg:text-lg"
           >
-            I am a Full Stack Developer driven by a passion for solving real-world problems through clean, scalable code. I build impactful digital products using modern web technologies, aiming to shape the future as a skilled Software Engineer.
+            Driven by a passion for solving real-world problems through clean, scalable code. I build impactful digital products using modern web technologies, aiming to shape the future as a skilled Software Engineer.
           </motion.p>
           <motion.div
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4 sm:px-0"
           >
-            <Link className="w-full" href={'/project'}>
+            <Link className="w-full sm:w-auto" href={'/project'}>
               <Button
                 data-cursor-text="GITHUB"
                 variant="primary"
-                className="px-8"
+                className="px-6 !py-3 !text-sm"
               >
-
                 VIEW PROJECTS
-
               </Button>
             </Link>
             <Button
               data-cursor-text="READ"
               variant="secondary"
-              className="px-5"
+              className="px-6 !py-3 !text-sm sm:w-auto"
               onClick={handleDownload}
             >
               DOWNLOAD RESUME
