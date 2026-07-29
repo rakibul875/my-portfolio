@@ -76,7 +76,7 @@ export default function HeroSection() {
             className="font-code-label text-primary tracking-[0.2em] uppercase mb-4 md:mb-6 flex items-center justify-center lg:justify-start gap-3 text-xs md:text-sm"
           >
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse shadow-[0_0_8px_rgba(138,43,226,0.8)]"></span>
-            [ STATUS: AVAILABLE FOR OPPORTUNITIES ]
+            [ FULL STACK DEVELOPER ]
           </motion.span>
           <motion.h1
             variants={itemVariants}
@@ -95,15 +95,14 @@ export default function HeroSection() {
           </motion.h1>
           <motion.h2
             variants={itemVariants}
-            className="text-2xl md:text-3xl text-white mb-6 font-bold"
+            className="text-2xl md:text-3xl mb-6 font-bold"
           >
-            I am a{" "}
             <span className="text-primary">
               <Typewriter
-                words={['Full Stack Developer', 'Software Engineer', 'Problem Solver']}
+                words={['React & Next.js', 'MERN Stack', 'JavaScript & TypeScript', 'Problem Solver']}
                 loop={true}
                 cursor
-                cursorStyle="_"
+                cursorStyle="|"
                 typeSpeed={70}
                 deleteSpeed={50}
                 delaySpeed={1000}
@@ -155,10 +154,10 @@ export default function HeroSection() {
               className="w-32 h-32 bg-primary/20 rounded-full blur-3xl absolute"
             ></motion.div>
             <div className="absolute inset-6 md:inset-8 rounded-full overflow-hidden z-10 bg-[#0a0a0a] border border-white/5 shadow-[0_0_30px_rgba(138,43,226,0.15)]">
-              <Image 
-                src={BannerImage} 
-                alt="Rakibul Islam Ashik" 
-                fill 
+              <Image
+                src={BannerImage}
+                alt="Rakibul Islam Ashik"
+                fill
                 className="object-cover hover:scale-110 transition-transform duration-700"
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
