@@ -147,17 +147,17 @@ export default function ProjectsSection() {
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap items-center gap-4 mt-auto">
+                <div className="flex items-center justify-between gap-2 mt-auto w-full">
                   <button
                     onClick={() => {
                       setSelectedProject(project);
                       setIsModalOpen(true);
                     }}
-                    className="flex items-center gap-2 text-white font-bold text-sm tracking-wide hover:text-primary transition-colors"
+                    className="flex items-center gap-2 text-white font-bold text-sm tracking-wide hover:text-primary transition-colors shrink-0"
                   >
                     View Details <ArrowRight className="w-4 h-4" />
                   </button>
-                  <div className="flex gap-2 sm:gap-3 ml-auto">
+                  <div className="flex gap-2 items-center shrink-0">
                     {project.clientLink && (
                       <Link
                         href={project.clientLink}
