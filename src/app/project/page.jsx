@@ -1,49 +1,81 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from "react";
 import Footer from "@/components/layout/Footer";
 import CustomCursor from "@/components/ui/CustomCursor";
 import Container from "@/components/ui/Container";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Terminal } from "lucide-react";
-import summer from '@/Image/summer.png';
-import study from '@/Image/study.png';
-import connect from '@/Image/Connect.png';
+import { ArrowLeft, ArrowRight, Terminal, Server } from "lucide-react";
+import summer from "@/Image/summer.png";
+import study from "@/Image/study.png";
+import connect from "@/Image/Connect.png";
+import ProjectDetailsModal from "@/components/ui/ProjectDetailsModal";
 
 export default function ProjectPage() {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const allProjects = [
     {
       id: 1,
-      title: "Project: MediCare Connect",
+      title: "MediCare Connect",
       description:
         "MediCare Connect is a secure MERN-stack healthcare platform that simplifies doctor appointments, online payments, and prescription management for Patients, Doctors, and Admin.",
       image: connect,
-      link: "https://github.com/rakibul875/medicare-connect-client",
+      clientLink: "https://github.com/rakibul875/medicare-connect-client",
+      serverLink: "https://github.com/rakibul875/medicare-connect-server",
       liveLink: "https://medicare-connect-client-pi.vercel.app/",
-      tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
+      tech: ["React.js", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"],
+      challenges: [
+        "Implemented secure role-based authentication and protected dashboard flows for Patients, Doctors, and Admin.",
+        "Integrated secure payment gateways for online doctor appointments.",
+      ],
+      futurePlans: [
+        "Add real-time chat between doctors and patients.",
+        "Implement video consultation features.",
+      ],
     },
     {
       id: 2,
-      title: "Project: StudyNook",
+      title: "StudyNook",
       description:
         "StudyNook is a premium, modern, and highly responsive MERN stack application designed to simplify booking quiet, private study rooms and spaces in libraries, campuses, or co-working hubs.",
       image: study,
-      link: "https://github.com/rakibul875/study-nook",
+      clientLink: "https://github.com/rakibul875/study-nook",
+      serverLink: "https://github.com/rakibul875/study-nook-server",
       liveLink: "https://study-nook-fawn.vercel.app",
-      tech: ["Next.js", "MongoDB", "Tailwind CSS", "Framer Motion"],
+      tech: ["Next.js", "React.js", "MongoDB", "Express.js", "Framer Motion"],
+      challenges: [
+        "Built a complex booking system preventing double-booking of study rooms.",
+        "Designed a premium, dark-themed responsive UI with smooth animations.",
+      ],
+      futurePlans: [
+        "Introduce a reward system for frequent bookings.",
+        "Add a review and rating system for study rooms.",
+      ],
     },
     {
       id: 3,
-      title: "Project: Summer Essentials Store",
+      title: "Summer Essentials Store",
       description:
         "A modern and fully responsive e-commerce platform dedicated to summer products. This project features a seamless user experience with dynamic product management and secure session-based authentication.",
       image: summer,
-      link: "https://github.com/rakibul875/summer-essentials-store",
+      clientLink: "https://github.com/rakibul875/summer-essentials-store",
+      serverLink:
+        "https://github.com/rakibul875/summer-essentials-store-server",
       liveLink: "https://summer-essentials-store-xi.vercel.app",
-      tech: ["React", "Express", "MongoDB", "Stripe"],
-    }
+      tech: ["React.js", "Express.js", "MongoDB", "Stripe", "JWT"],
+      challenges: [
+        "Balanced Stripe checkout with fast content delivery and polished UX on a large content platform.",
+        "Implemented dynamic product management with filtering and search capabilities.",
+      ],
+      futurePlans: [
+        "Add real-time inventory tracking and alerts.",
+        "Expand admin tools for order management and insights.",
+      ],
+    },
   ];
 
   return (
@@ -62,7 +94,10 @@ export default function ProjectPage() {
               [DEV_ARCHITECT]
             </span>
           </Link>
-          <Link href="/" className="flex items-center gap-2 text-primary font-code-label text-xs md:text-sm tracking-widest group/btn hover:text-white transition-colors">
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-primary font-code-label text-xs md:text-sm tracking-widest group/btn hover:text-white transition-colors"
+          >
             <ArrowLeft className="w-4 h-4 transition-transform group-hover/btn:-translate-x-2" />
             RETURN_TO_BASE
           </Link>
@@ -80,14 +115,15 @@ export default function ProjectPage() {
             className="flex flex-col items-center justify-center text-center mb-16 md:mb-24"
           >
             <span className="font-code-label text-primary tracking-[0.3em] uppercase mb-4 flex items-center justify-center gap-3 text-xs md:text-sm">
-              <Terminal className="w-4 h-4 text-primary" />
-              [ PROJECT_DATABASE_ACCESS_GRANTED ]
+              <Terminal className="w-4 h-4 text-primary" />[
+              PROJECT_DATABASE_ACCESS_GRANTED ]
             </span>
             <h1 className="font-h1 text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
               System <span className="text-primary">Archives</span>
             </h1>
             <p className="font-body-md text-on-surface-variant max-w-2xl text-base md:text-lg">
-              A comprehensive archive of engineered systems, digital interfaces, and architectural solutions developed to scale.
+              A comprehensive archive of engineered systems, digital interfaces,
+              and architectural solutions developed to scale.
             </p>
           </motion.div>
 
@@ -106,6 +142,9 @@ export default function ProjectPage() {
               >
                 <div className="aspect-video w-full relative overflow-hidden border-b border-white/5">
                   <div className="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute top-4 left-4 z-20 opacity-20 font-black text-6xl text-white pointer-events-none">
+                    0{index + 1}
+                  </div>
                   <Image
                     src={project.image}
                     alt={project.title}
@@ -113,44 +152,60 @@ export default function ProjectPage() {
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                  <div className="absolute bottom-4 left-4 right-4 z-20 flex flex-wrap gap-2 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-                    {project.tech?.map((tech) => (
-                      <span key={tech} className="bg-black/80 backdrop-blur-md border border-white/10 text-white/90 text-[10px] px-3 py-1 rounded-full font-code-label tracking-widest uppercase shadow-[0_0_10px_rgba(138,43,226,0.3)]">
+                </div>
+
+                <div className="p-8 md:p-10 flex-1 flex flex-col relative">
+                  {/* Tech Stack Pills */}
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.tech?.slice(0, 5).map((tech, i) => (
+                      <span
+                        key={i}
+                        className="text-xs px-3 py-1 bg-white/[0.03] border border-white/10 rounded-md text-white/80 hover:border-primary/30 transition-colors"
+                      >
                         {tech}
                       </span>
                     ))}
                   </div>
-                </div>
 
-                <div className="p-8 md:p-10 flex-1 flex flex-col relative">
-                  <h3 className="font-h3 text-xl md:text-2xl text-white mb-4 group-hover:text-primary transition-colors">
+                  <h3 className="font-h3 text-xl md:text-2xl text-primary font-bold mb-4 group-hover:text-primary-light transition-colors">
                     {project.title}
                   </h3>
                   <p className="font-body-md text-on-surface-variant mb-8 text-sm md:text-base leading-relaxed line-clamp-3">
                     {project.description}
                   </p>
-                  
-                  <div className="flex flex-col justify-between xl:flex-row gap-4 mt-auto">
-                    <Link
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
+
+                  <div className="flex flex-wrap items-center gap-4 mt-auto">
+                    <button
+                      onClick={() => {
+                        setSelectedProject(project);
+                        setIsModalOpen(true);
+                      }}
+                      className="flex items-center gap-2 text-white font-bold text-sm tracking-wide hover:text-primary transition-colors"
                     >
-                      <button className="flex items-center gap-2 text-primary font-code-label text-xs md:text-sm tracking-widest group/btn self-start hover:text-white transition-colors">
-                        VIEW_SOURCE
-                        <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-2" />
-                      </button>
-                    </Link>
-                    <Link
-                      href={project.liveLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <button className="flex items-center gap-2 text-primary font-code-label text-xs md:text-sm tracking-widest group/btn self-start hover:text-white transition-colors">
-                        VIEW_LIVE
-                        <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-2" />
-                      </button>
-                    </Link>
+                      View Details <ArrowRight className="w-4 h-4" />
+                    </button>
+                    <div className="flex gap-2 sm:gap-3 xl:ml-auto xl:mt-0 mt-2">
+                      {project.clientLink && (
+                        <Link
+                          href={project.clientLink}
+                          target="_blank"
+                          className="flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 px-3 py-1.5 rounded-lg text-white/90 text-xs sm:text-sm transition-colors"
+                        >
+                          {/* <Github className="w-4 h-4" /> */}
+                          <span className="hidden sm:inline">Client</span>
+                        </Link>
+                      )}
+                      {project.serverLink && (
+                        <Link
+                          href={project.serverLink}
+                          target="_blank"
+                          className="flex items-center gap-2 bg-[#0f172a] hover:bg-[#1e293b] border border-teal-500/20 px-3 py-1.5 rounded-lg text-teal-400 text-xs sm:text-sm transition-colors"
+                        >
+                          <Server className="w-4 h-4" />
+                          <span className="hidden sm:inline">Server</span>
+                        </Link>
+                      )}
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -160,6 +215,12 @@ export default function ProjectPage() {
       </main>
 
       <Footer />
+
+      <ProjectDetailsModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        project={selectedProject}
+      />
     </>
   );
 }
