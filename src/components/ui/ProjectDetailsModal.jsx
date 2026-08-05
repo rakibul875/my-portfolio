@@ -35,7 +35,6 @@ export default function ProjectDetailsModal({ project, isOpen, onClose }) {
           onClick={(e) => e.stopPropagation()}
           className="bg-[#0f0f13] border border-white/10 rounded-2xl w-full max-w-5xl max-h-[90vh] overflow-y-auto shadow-2xl relative custom-scrollbar"
         >
-          {/* Close Button */}
           <button
             onClick={onClose}
             className="absolute top-4 right-4 md:top-6 md:right-6 p-2 bg-white/5 hover:bg-white/10 rounded-full transition-colors text-white/70 hover:text-white"
@@ -44,7 +43,6 @@ export default function ProjectDetailsModal({ project, isOpen, onClose }) {
           </button>
 
           <div className="p-6 md:p-10">
-            {/* Header */}
             <div className="mb-10">
               <span className="text-primary/80 font-code-label text-xs tracking-[0.2em] uppercase mb-3 block">
                 Project Overview
@@ -57,9 +55,7 @@ export default function ProjectDetailsModal({ project, isOpen, onClose }) {
               </p>
             </div>
 
-            {/* Grid Content */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Tech Stack */}
               <div className="bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:border-primary/20 transition-colors">
                 <h3 className="text-primary/80 font-code-label text-xs tracking-[0.2em] uppercase mb-5">
                   Tech Stack
@@ -76,7 +72,6 @@ export default function ProjectDetailsModal({ project, isOpen, onClose }) {
                 </div>
               </div>
 
-              {/* Quick Links */}
               <div className="bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:border-primary/20 transition-colors">
                 <h3 className="text-primary/80 font-code-label text-xs tracking-[0.2em] uppercase mb-5">
                   Quick Links
@@ -118,7 +113,6 @@ export default function ProjectDetailsModal({ project, isOpen, onClose }) {
                 </div>
               </div>
 
-              {/* Challenges Faced */}
               <div className="bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:border-primary/20 transition-colors">
                 <h3 className="text-primary/80 font-code-label text-xs tracking-[0.2em] uppercase mb-5">
                   Challenges Faced
@@ -136,7 +130,6 @@ export default function ProjectDetailsModal({ project, isOpen, onClose }) {
                 </ul>
               </div>
 
-              {/* Future Improvements */}
               <div className="bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:border-primary/20 transition-colors">
                 <h3 className="text-primary/80 font-code-label text-xs tracking-[0.2em] uppercase mb-5">
                   Future Improvements / Plans
