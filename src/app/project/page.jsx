@@ -28,7 +28,15 @@ export default function ProjectPage() {
       clientLink: "https://github.com/rakibul875/medicare-connect-client",
       serverLink: "https://github.com/rakibul875/medicare-connect-server",
       liveLink: "https://medicare-connect-client-pi.vercel.app/",
-      tech: ["React.js", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"],
+      tech: [
+        "Next.js",
+        "React.js",
+        "Node.js",
+        "JWT",
+        "MongoDB",
+        "Express.js",
+        "Tailwind CSS",
+      ],
       challenges: [
         "Implemented secure role-based authentication and protected dashboard flows for Patients, Doctors, and Admin.",
         "Integrated secure payment gateways for online doctor appointments.",
@@ -67,7 +75,7 @@ export default function ProjectPage() {
       serverLink:
         "https://github.com/rakibul875/summer-essentials-store-server",
       liveLink: "https://summer-essentials-store-xi.vercel.app",
-      tech: ["React.js", "Express.js", "MongoDB", "Stripe", "JWT"],
+      tech: ["React.js", "Express.js", "Better-auth"],
       challenges: [
         "Balanced Stripe checkout with fast content delivery and polished UX on a large content platform.",
         "Implemented dynamic product management with filtering and search capabilities.",
