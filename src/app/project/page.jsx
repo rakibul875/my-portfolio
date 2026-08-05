@@ -7,7 +7,8 @@ import Container from "@/components/ui/Container";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Terminal, Server } from "lucide-react";
+import { ArrowLeft, ArrowRight, Terminal } from "lucide-react";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import summer from "@/Image/summer.png";
 import study from "@/Image/study.png";
 import connect from "@/Image/Connect.png";
@@ -140,7 +141,7 @@ export default function ProjectPage() {
                 key={project.id}
                 className="glass-card rounded-[24px] overflow-hidden light-stroke group flex flex-col hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_10px_40px_rgba(138,43,226,0.15)] bg-[#121214]/60 backdrop-blur-xl"
               >
-                <div className="aspect-video w-full relative overflow-hidden border-b border-white/5">
+                <div className="h-[200px] sm:h-[240px] w-full relative overflow-hidden border-b border-white/5">
                   <div className="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="absolute top-4 left-4 z-20 opacity-20 font-black text-6xl text-white pointer-events-none">
                     0{index + 1}
@@ -191,18 +192,18 @@ export default function ProjectPage() {
                           target="_blank"
                           className="flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 px-3 py-1.5 rounded-lg text-white/90 text-xs sm:text-sm transition-colors"
                         >
-                          {/* <Github className="w-4 h-4" /> */}
+                          <FaGithub className="w-4 h-4" />
                           <span className="hidden sm:inline">Client</span>
                         </Link>
                       )}
-                      {project.serverLink && (
+                      {project.liveLink && (
                         <Link
-                          href={project.serverLink}
+                          href={project.liveLink}
                           target="_blank"
                           className="flex items-center gap-2 bg-[#0f172a] hover:bg-[#1e293b] border border-teal-500/20 px-3 py-1.5 rounded-lg text-teal-400 text-xs sm:text-sm transition-colors"
                         >
-                          <Server className="w-4 h-4" />
-                          <span className="hidden sm:inline">Server</span>
+                          <FaExternalLinkAlt className="w-4 h-4" />
+                          <span className="hidden sm:inline">Live Site</span>
                         </Link>
                       )}
                     </div>

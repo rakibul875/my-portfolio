@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink, Github, Server } from "lucide-react";
+import { X, ExternalLink, Server } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 
 export default function ProjectDetailsModal({ project, isOpen, onClose }) {
@@ -99,7 +100,7 @@ export default function ProjectDetailsModal({ project, isOpen, onClose }) {
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 text-white/80 hover:text-primary transition-colors w-fit"
                     >
-                      {/* <Github className="w-4 h-4" /> */}
+                      <FaGithub className="w-4 h-4" />
                       <span>GitHub Repository</span>
                     </Link>
                   )}
