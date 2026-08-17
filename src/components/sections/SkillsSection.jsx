@@ -4,7 +4,7 @@ import {
   SiNextdotjs, SiReact, SiJavascript, SiTypescript, SiTailwindcss, SiCss, SiHtml5,
   SiNodedotjs, SiExpress, SiMongodb, SiMongoose, SiDaisyui, SiHeroui,
   SiFramer, SiGreensock, SiThreedotjs, SiGit, SiGithub,
-  SiPostman, SiNpm
+  SiPostman, SiNpm, SiPostgresql, SiPrisma
 } from "react-icons/si";
 import { TbApi, TbCube3dSphere, TbBrandVscode } from "react-icons/tb";
 import Container from "../ui/Container";
@@ -37,6 +37,8 @@ export default function SkillsSection() {
       skills: [
         { name: "MongoDB", icon: SiMongodb, percent: 90, color: "text-[#47A248]" },
         { name: "Mongoose", icon: SiMongoose, percent: 88, color: "text-[#880000]" },
+        { name: "PostgreSQL", icon: SiPostgresql, percent: 85, color: "text-[#4169E1]" },
+        { name: "Prisma", icon: SiPrisma, percent: 80, color: "text-white" },
       ]
     },
     {
