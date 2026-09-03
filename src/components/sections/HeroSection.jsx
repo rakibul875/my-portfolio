@@ -4,8 +4,8 @@ import Link from "next/link";
 import Button from "../ui/Button";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import BannerImage from "@/Image/ashik-1.png"
-import { Typewriter } from 'react-simple-typewriter';
+import BannerImage from "@/Image/ashik.jpg";
+import { Typewriter } from "react-simple-typewriter";
 
 export default function HeroSection() {
   const handleDownload = () => {
@@ -99,7 +99,12 @@ export default function HeroSection() {
           >
             <span className="text-primary">
               <Typewriter
-                words={['React & Next.js', 'MERN Stack', 'JavaScript & TypeScript', 'Problem Solver']}
+                words={[
+                  "React & Next.js",
+                  "MERN Stack",
+                  "JavaScript & TypeScript",
+                  "Problem Solver",
+                ]}
                 loop={true}
                 cursor
                 cursorStyle="|"
@@ -113,13 +118,16 @@ export default function HeroSection() {
             variants={itemVariants}
             className="font-body-lg text-on-surface-variant max-w-xl mb-8 md:mb-10 text-sm md:text-base lg:text-lg"
           >
-            Driven by a passion for solving real-world problems through clean, scalable code. I build impactful digital products using modern web technologies, aiming to shape the future as a skilled Software Engineer.
+            Driven by a passion for solving real-world problems through clean,
+            scalable code. I build impactful digital products using modern web
+            technologies, aiming to shape the future as a skilled Software
+            Engineer.
           </motion.p>
           <motion.div
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4 sm:px-0"
           >
-            <Link className="w-full sm:w-auto" href={'/project'}>
+            <Link className="w-full sm:w-auto" href={"/project"}>
               <Button
                 data-cursor-text="GITHUB"
                 variant="primary"
