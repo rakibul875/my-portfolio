@@ -22,7 +22,9 @@ export default function CustomCursor() {
   useEffect(() => {
     // 1. Device detection (mobile/tablet & touch bypass)
     const checkDevice = () => {
-      const isTouch = window.matchMedia("(pointer: coarse)").matches || "ontouchstart" in window;
+      const isTouch =
+        window.matchMedia("(pointer: coarse)").matches ||
+        "ontouchstart" in window;
       const isSmallScreen = window.innerWidth < 1024;
       const mobileOrTouch = isTouch || isSmallScreen;
 
@@ -43,7 +45,7 @@ export default function CustomCursor() {
     const handleMouseMove = (e) => {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
-      
+
       // Make cursor visible on first movement (if desktop)
       if (!isMobile && !isVisible) {
         setIsVisible(true);
@@ -66,11 +68,20 @@ export default function CustomCursor() {
       if (!target) return;
 
       // Scan closest element hierarchy for interactive classes or selectors
-      const isButton = target.closest("button") || target.closest("[role='button']") || target.closest(".btn");
+      const isButton =
+        target.closest("button") ||
+        target.closest("[role='button']") ||
+        target.closest(".btn");
       const isLink = target.closest("a");
-      const isCard = target.closest(".glass-card") || target.closest("[data-hover-card]");
-      const isIcon = target.closest("svg") || target.closest(".icon-hover") || target.closest(".group-hover\\:scale-110");
-      const cursorText = target.closest("[data-cursor-text]")?.getAttribute("data-cursor-text");
+      const isCard =
+        target.closest(".glass-card") || target.closest("[data-hover-card]");
+      const isIcon =
+        target.closest("svg") ||
+        target.closest(".icon-hover") ||
+        target.closest(".group-hover\\:scale-110");
+      const cursorText = target
+        .closest("[data-cursor-text]")
+        ?.getAttribute("data-cursor-text");
 
       if (cursorText) {
         setHoverType("custom");
@@ -232,7 +243,6 @@ export default function CustomCursor() {
             />
           )}
 
-          {/* Pulse aura for icons */}
           {hoverType === "icon" && (
             <motion.div
               animate={{ scale: [1, 1.25, 1], opacity: [0.3, 0.6, 0.3] }}
@@ -263,7 +273,10 @@ export default function CustomCursor() {
           }}
           animate={{
             scale: cursorStyles.dot.scale,
-            opacity: cursorStyles.dot.opacity !== undefined ? cursorStyles.dot.opacity : 1,
+            opacity:
+              cursorStyles.dot.opacity !== undefined
+                ? cursorStyles.dot.opacity
+                : 1,
             backgroundColor: cursorStyles.dot.backgroundColor || "#dcb8ff",
           }}
           transition={{
