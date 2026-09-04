@@ -137,7 +137,6 @@ export default function ProjectsSection() {
                 />
               </div>
               <div className="p-8 md:p-10 flex-1 flex flex-col relative">
-                {/* Tech Stack Pills */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech?.slice(0, 5).map((tech, i) => (
                     <span
