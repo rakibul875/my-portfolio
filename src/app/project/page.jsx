@@ -91,10 +91,6 @@ export default function ProjectPage() {
     <>
       <CustomCursor />
 
-      {/* 
-        Using a simplified header for the projects page to avoid hash-link issues from the main Navbar.
-        This provides a clear way back to the main system.
-      */}
       <header className="fixed top-0 w-full z-50 border-b border-primary/20 bg-[#121214]/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(138,43,226,0.15)] py-4">
         <div className="flex justify-between items-center max-w-7xl mx-auto px-6 lg:px-8">
           <Link href="/" className="flex items-center gap-3 group">
@@ -164,7 +160,6 @@ export default function ProjectPage() {
                 </div>
 
                 <div className="p-8 md:p-10 flex-1 flex flex-col relative">
-                  {/* Tech Stack Pills */}
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tech?.slice(0, 5).map((tech, i) => (
                       <span
