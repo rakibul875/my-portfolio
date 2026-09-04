@@ -251,7 +251,6 @@ export default function CustomCursor() {
             />
           )}
 
-          {/* Custom text renderer inside the ring */}
           {hoverType === "custom" && hoverText && (
             <motion.span
               initial={{ opacity: 0, scale: 0.8 }}
