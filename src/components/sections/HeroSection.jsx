@@ -41,7 +41,7 @@ export default function HeroSection() {
       id="overview"
       className="px-6 md:px-8 pt-24 md:pt-32 pb-16 md:pb-24 flex items-center relative overflow-hidden max-w-7xl mx-auto min-h-[80vh]"
     >
-      {/* Floating Background Glow Animations */}
+  
       <motion.div
         animate={{
           scale: [1, 1.1, 1],
