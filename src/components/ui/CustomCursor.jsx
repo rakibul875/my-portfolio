@@ -262,7 +262,6 @@ export default function CustomCursor() {
           )}
         </motion.div>
 
-        {/* Precise Focus Cursor Dot */}
         <motion.div
           style={{
             x: mouseX,
