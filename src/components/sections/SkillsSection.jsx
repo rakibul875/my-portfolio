@@ -127,41 +127,6 @@ export default function SkillsSection() {
       ],
     },
     {
-      title: "Animation & 3D",
-      skills: [
-        {
-          name: "Framer Motion",
-          icon: SiFramer,
-          percent: 85,
-          color: "text-[#0055FF]",
-        },
-        {
-          name: "GSAP",
-          icon: SiGreensock,
-          percent: 65,
-          color: "text-[#88CE02]",
-        },
-        {
-          name: "Three.js",
-          icon: SiThreedotjs,
-          percent: 60,
-          color: "text-white",
-        },
-        {
-          name: "React Three Fiber",
-          icon: SiReact,
-          percent: 55,
-          color: "text-[#61DAFB]",
-        },
-        {
-          name: "Drei",
-          icon: TbCube3dSphere,
-          percent: 55,
-          color: "text-[#FF8A65]",
-        },
-      ],
-    },
-    {
       title: "Tools",
       skills: [
         { name: "Git", icon: SiGit, percent: 90, color: "text-[#F05032]" },
