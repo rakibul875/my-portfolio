@@ -14,9 +14,6 @@ import {
   SiMongoose,
   SiDaisyui,
   SiHeroui,
-  SiFramer,
-  SiGreensock,
-  SiThreedotjs,
   SiGit,
   SiGithub,
   SiPostman,
@@ -24,7 +21,7 @@ import {
   SiPostgresql,
   SiPrisma,
 } from "react-icons/si";
-import { TbApi, TbCube3dSphere, TbBrandVscode } from "react-icons/tb";
+import { TbApi, TbBrandVscode } from "react-icons/tb";
 import Container from "../ui/Container";
 import { motion } from "framer-motion";
 
