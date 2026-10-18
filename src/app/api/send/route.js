@@ -53,7 +53,7 @@ export async function POST(request) {
 
     if (emailResponse.error) {
       return NextResponse.json(
-        { error: emailResponse.error.message },
+        { success: false, error: emailResponse.error.message },
         { status: 500 }
       );
     }
@@ -61,7 +61,7 @@ export async function POST(request) {
     return NextResponse.json({ success: true, data: emailResponse.data });
   } catch (error) {
     return NextResponse.json(
-      { error: `TRANSMISSION_FAILED: ${error.message}` },
+      { success: false, error: `TRANSMISSION_FAILED: ${error.message}` },
       { status: 500 }
     );
   }

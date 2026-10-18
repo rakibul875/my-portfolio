@@ -37,7 +37,7 @@ export default function ContactSection() {
     setMessageText("");
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/api/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
