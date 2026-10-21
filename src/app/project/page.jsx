@@ -12,6 +12,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import summer from "@/Image/summer.png";
 import study from "@/Image/study.png";
 import connect from "@/Image/Connect.png";
+import vanraz from "@/Image/venRaz.png";
 import ProjectDetailsModal from "@/components/ui/ProjectDetailsModal";
 
 export default function ProjectPage() {
@@ -21,19 +22,48 @@ export default function ProjectPage() {
   const allProjects = [
     {
       id: 1,
+      title: "VanRaz",
+      description:
+        "VenRaz is a modern, full-stack, multi-vendor e-commerce platform featuring advanced AI-powered capabilities, smart inventory management, and an automated CI/CD pipeline. It creates a seamless digital marketplace experience for buyers, sellers, and administrators.",
+      image: vanraz,
+      clientLink: "https://github.com/rakibul875/vanraz-client",
+      serverLink: "https://github.com/rakibul875/vanraz-server",
+      liveLink: "https://ven-raz-client.vercel.app",
+      tech: [
+        "Next.js",
+        "React.js",
+        "Node.js",
+        "JWT",
+        "Mongoose",
+        "MongoDB",
+        "Express.js",
+        "Tailwind CSS",
+      ],
+      challenges: [
+        "AI Integration and Decision-Making: Integrating AI-powered features capable of analyzing data, making intelligent decisions, and automating tasks with minimal human intervention",
+        "management and automated workflows while ensuring data accuracy, system efficiency, scalability, and reliable performance.",
+      ],
+      futurePlans: [
+        "AI-Powered Product Recommendations: Implementing an AI system that analyzes user behavior, browsing history, and purchase patterns to recommend relevant products.",
+        " AI-Based Smart Inventory Prediction: Developing an AI system that predicts product demand, detects low-stock items, and helps sellers make smarter inventory management decisions.",
+      ],
+    },
+    {
+      id: 2,
       title: "MediCare Connect",
       description:
         "MediCare Connect is a secure MERN-stack healthcare platform that simplifies doctor appointments, online payments, and prescription management for Patients, Doctors, and Admin.",
       image: connect,
       clientLink: "https://github.com/rakibul875/medicare-connect-client",
       serverLink: "https://github.com/rakibul875/medicare-connect-server",
-      liveLink: "https://medicare-connect-client-pi.vercel.app/",
+      liveLink: "https://medicare-connect-client-pi.vercel.app",
       tech: [
         "Next.js",
         "React.js",
         "Node.js",
         "JWT",
         "MongoDB",
+        "Mongoose",
         "Express.js",
         "Tailwind CSS",
       ],
@@ -47,7 +77,7 @@ export default function ProjectPage() {
       ],
     },
     {
-      id: 2,
+      id: 3,
       title: "StudyNook",
       description:
         "StudyNook is a premium, modern, and highly responsive MERN stack application designed to simplify booking quiet, private study rooms and spaces in libraries, campuses, or co-working hubs.",
@@ -66,7 +96,7 @@ export default function ProjectPage() {
       ],
     },
     {
-      id: 3,
+      id: 4,
       title: "Summer Essentials Store",
       description:
         "A modern and fully responsive e-commerce platform dedicated to summer products. This project features a seamless user experience with dynamic product management and secure session-based authentication.",
