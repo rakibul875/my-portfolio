@@ -13,6 +13,7 @@ import summer from "@/Image/summer.png";
 import study from "@/Image/study.png";
 import connect from "@/Image/Connect.png";
 import vanraz from "@/Image/venRaz.png";
+import Nexus from "@/Image/nexusAi.png";
 import ProjectDetailsModal from "@/components/ui/ProjectDetailsModal";
 
 export default function ProjectPage() {
@@ -113,6 +114,21 @@ export default function ProjectPage() {
       futurePlans: [
         "Add real-time inventory tracking and alerts.",
         "Expand admin tools for order management and insights.",
+      ],
+    },
+    {
+      id: 5,
+      title: "Nexus AI Marketplace",
+      description:
+        "This is the frontend client for the Nexus AI Marketplace, built to facilitate a dynamic and seamless AI marketplace platform. It uses the latest web technologies to provide a fast, secure, and beautiful user experience..",
+      image: Nexus,
+      clientLink: "https://github.com/rakibul875/NexusAi-Marketplace-client",
+      serverLink: "https://github.com/rakibul875/NexusAi-Marketplace-server",
+      liveLink: "https://nexus-ai-marketplace-client.vercel.app",
+      tech: ["Next.js", "React.js", "Express.js", "MongoDB", "Better-auth"],
+      challenges: [
+        "AI Integration and User Experience: Integrating AI-powered features into the frontend while ensuring a seamless, responsive, and user-friendly marketplace experience.",
+        "Dynamic Data Handling and Performance: Managing real-time data updates, API integration, and efficient frontend rendering while maintaining application speed, security, and scalability.",
       ],
     },
   ];
