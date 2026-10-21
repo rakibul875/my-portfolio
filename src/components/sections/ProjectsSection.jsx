@@ -10,6 +10,7 @@ import Link from "next/link";
 import summer from "@/Image/summer.png";
 import study from "@/Image/study.png";
 import connect from "@/Image/Connect.png";
+import vanraz from "@/Image/venRaz.png";
 import ProjectDetailsModal from "../ui/ProjectDetailsModal";
 
 export default function ProjectsSection() {
@@ -19,6 +20,34 @@ export default function ProjectsSection() {
   const projects = [
     {
       id: 1,
+      title: "VanRaz",
+      description:
+        "VenRaz is a modern, full-stack, multi-vendor e-commerce platform featuring advanced AI-powered capabilities, smart inventory management, and an automated CI/CD pipeline. It creates a seamless digital marketplace experience for buyers, sellers, and administrators.",
+      image: vanraz,
+      clientLink: "https://github.com/rakibul875/vanraz-client",
+      serverLink: "https://github.com/rakibul875/vanraz-server",
+      liveLink: "https://ven-raz-client.vercel.app",
+      tech: [
+        "Next.js",
+        "React.js",
+        "Node.js",
+        "JWT",
+        "Mongoose",
+        "MongoDB",
+        "Express.js",
+        "Tailwind CSS",
+      ],
+      challenges: [
+        "AI Integration and Decision-Making: Integrating AI-powered features capable of analyzing data, making intelligent decisions, and automating tasks with minimal human intervention",
+        "management and automated workflows while ensuring data accuracy, system efficiency, scalability, and reliable performance.",
+      ],
+      futurePlans: [
+        "AI-Powered Product Recommendations: Implementing an AI system that analyzes user behavior, browsing history, and purchase patterns to recommend relevant products.",
+        " AI-Based Smart Inventory Prediction: Developing an AI system that predicts product demand, detects low-stock items, and helps sellers make smarter inventory management decisions.",
+      ],
+    },
+    {
+      id: 2,
       title: "MediCare Connect",
       description:
         "MediCare Connect is a secure MERN-stack healthcare platform that simplifies doctor appointments, online payments, and prescription management for Patients, Doctors, and Admin",
@@ -46,7 +75,7 @@ export default function ProjectsSection() {
       ],
     },
     {
-      id: 2,
+      id: 3,
       title: "StudyNook",
       description:
         "StudyNook is a premium, modern, and highly responsive MERN stack application designed to simplify booking quiet, private study rooms and spaces in libraries, campuses, or co-working hubs.",
@@ -62,26 +91,6 @@ export default function ProjectsSection() {
       futurePlans: [
         "Introduce a reward system for frequent bookings.",
         "Add a review and rating system for study rooms.",
-      ],
-    },
-    {
-      id: 3,
-      title: "Summer Essentials Store",
-      description:
-        "A modern and fully responsive e-commerce platform dedicated to summer products. This project features a seamless user experience with dynamic product management and secure session-based authentication.",
-      image: summer,
-      clientLink: "https://github.com/rakibul875/summer-essentials-store",
-      serverLink:
-        "https://github.com/rakibul875/summer-essentials-store-server",
-      liveLink: "https://summer-essentials-store-xi.vercel.app",
-      tech: ["Next.js", "React.js", "Better-auth"],
-      challenges: [
-        "Balanced Stripe checkout with fast content delivery and polished UX on a large content platform.",
-        "Implemented dynamic product management with filtering and search capabilities.",
-      ],
-      futurePlans: [
-        "Add real-time inventory tracking and alerts.",
-        "Expand admin tools for order management and insights.",
       ],
     },
   ];
