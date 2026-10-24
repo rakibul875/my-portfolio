@@ -15,6 +15,7 @@ import connect from "@/Image/Connect.png";
 import vanraz from "@/Image/venRaz.png";
 import Nexus from "@/Image/nexusAi.png";
 import ProjectDetailsModal from "@/components/ui/ProjectDetailsModal";
+import SliceCraft from "@/Image/SliceCraft.png";
 
 export default function ProjectPage() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -125,6 +126,23 @@ export default function ProjectPage() {
       clientLink: "https://github.com/rakibul875/NexusAi-Marketplace-client",
       serverLink: "https://github.com/rakibul875/NexusAi-Marketplace-server",
       liveLink: "https://nexus-ai-marketplace-client.vercel.app",
+      tech: ["Next.js", "React.js", "Express.js", "MongoDB", "Better-auth"],
+      challenges: [
+        "AI Integration and User Experience: Integrating AI-powered features into the frontend while ensuring a seamless, responsive, and user-friendly marketplace experience.",
+        "Dynamic Data Handling and Performance: Managing real-time data updates, API integration, and efficient frontend rendering while maintaining application speed, security, and scalability.",
+      ],
+    },
+    {
+      id: 6,
+      title: "SliceCraft",
+      description:
+        "A production-grade, full-stack MERN application featuring a 4-step Custom Pizza Builder, Razorpay payment gateway integration, WebSockets real-time order tracking, and an automated inventory Sentinel driven by node-cron & nodemailer.",
+      image: SliceCraft,
+      clientLink:
+        "https://github.com/rakibul875/OIBSIP/tree/main/WebDev-L3-PizzaDelivery",
+      serverLink:
+        "https://github.com/rakibul875/OIBSIP/tree/main/WebDev-L3-PizzaDelivery",
+      liveLink: "https://client-snowy-seven-50.vercel.app",
       tech: ["Next.js", "React.js", "Express.js", "MongoDB", "Better-auth"],
       challenges: [
         "AI Integration and User Experience: Integrating AI-powered features into the frontend while ensuring a seamless, responsive, and user-friendly marketplace experience.",
