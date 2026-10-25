@@ -10,8 +10,8 @@ import { Typewriter } from "react-simple-typewriter";
 export default function HeroSection() {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/resume/MD_Rakibul_Islam_Ashik_full_stack_resume.pdf";
-    link.download = "MD_Rakibul_Islam_Ashik_full_stack_resume.pdf";
+    link.href = "/resume/Rakibul_Islam_Ashik_resume.pdf";
+    link.download = "Rakibul_Islam_Ashik_resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
